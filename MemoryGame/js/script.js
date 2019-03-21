@@ -1,3 +1,29 @@
+
+//Starts here...
+document.addEventListener('DOMContentLoaded', function(){
+    // Get overlays, cards elemeents using their classes
+    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+    let cards = Array.from(document.getElementsByClassName('card'));
+
+    let game = new MemoryGame(100, cards);
+
+    overlays.forEach(overlay => {
+        overlay.addEventListener('click', () => {
+            // we first want to remove the overlay visibility 
+            //and then, we start the game
+            overlay.classList.remove('visible');
+            game.startGame();
+        });
+    });
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            game.flipCard(card);
+        });
+    });
+
+});
+
 class AudioController {
     constructor() {
         this.bgMusic = new Audio("./data/audio/dance.mp3");
@@ -158,35 +184,4 @@ class MemoryGame {
             }
         }
     }
-}
-
-//We first start here
-// Wait until the page loads before the script runs.
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready);
-} else {
-    ready();
-}
-
-function ready() {
-    // Get overlays, cards elemeents using their classes
-    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-    let cards = Array.from(document.getElementsByClassName('card'));
-
-    let game = new MemoryGame(100, cards);
-
-    overlays.forEach(overlay => {
-        overlay.addEventListener('click', () => {
-            // we first want to remove the overlay visibility 
-            //and then, we start the game
-            overlay.classList.remove('visible');
-            game.startGame();
-        });
-    });
-
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            game.flipCard(card);
-        });
-    });
 }
