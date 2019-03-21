@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<!-- Author: Enock Gansou -->
+	<!--meta http-equiv="X-UA-Compatible" content="IE=edge"; charset="utf-8" -->
+	<!-- meta name="viewport" content="width=device-width, initial-scale=1" -->
+	<meta charset="UTF-8">
+
+	<title>Fort-O-Nite Memory Game</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js" async></script>
+
+</head>
+
+<body>
+
+	<h1 class="title">Fort-O-Nite Memory Game</h1>
+	<img class ="front-page page-left" src ="data/front-page/character1.png">
+	<img class ="front-page page-right" src ="data/front-page/character2.png">
+
+	<div class ="overlay-text visible">
+		Click to Start the Game
+	</div>
+
+	<div id="game-over-text" class="overlay-text">
+		GAME OVER!
+		<span class="overlay-text-small">Click to  Restart</span>
+	</div>
+	<div id="victory-text" class="overlay-text">
+		YOU WON!
+		<span class="overlay-text-small">Click to  Restart</span>
+	</div>
+
+	<div class ="container">
+		
+		<div class="info-container">
+			<div class="game-info">
+				Time <span id="time-remaining">100</span>
+			</div>
+			<div class="game-info">
+				Flips <span id="flips">0</span>
+			</div>	
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/1.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/1.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/2.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/2.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/3.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/3.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/4.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/4.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/5.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/5.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/6.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/6.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/7.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/7.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/8.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/8.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/9.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/9.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/10.png">	
+			</div>
+		</div>
+
+		<div class = "card">
+			<div class="back face">
+				<img class ="back-cover back-cover-top" src ="data/back/cover.png">
+				<img class ="back-cover back-cover-bottom" src ="data/back/cover.png">
+			</div>
+			<div class="front face">
+				<img class ="front-cover" src ="data/characters/10.png">	
+			</div>
+		</div>
+
+		
+	</div>
+
+</body>
+
+
+
+</html>
