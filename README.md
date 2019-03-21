@@ -1,5 +1,5 @@
 # Fort-O-Nite-Memory-Game-
-A memory game inspired by the characters of the popular game "Fortnite"
+A memory game inspired by the the popular game "Fortnite"
 
 This app is intended for personal use only.
 
